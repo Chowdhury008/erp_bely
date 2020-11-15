@@ -103,6 +103,8 @@ class TodoController extends Controller
      */
     public function destroy(Todo $todo,$id)
     {
+//        echo '<pre>';
+//        print_r($id);
         Todo::destroy(array('id',$id));
         
         return redirect('todo_show');
