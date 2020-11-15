@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <a href="todo_show">Show Todo List</a>
                 </div>
             </div>
         </div>
