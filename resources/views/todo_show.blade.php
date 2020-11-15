@@ -23,9 +23,6 @@
         color: white;
     }
 </style>
-<a href="todo_create">Add Record</a><br/><br/>
-{{session('msg')}}
-<br/>
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -39,7 +36,9 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
+{{--                        <a href="todo_create"><h2>Add Record</h2></a>--}}
+                        {{session('msg')}}
+                        <br/>
                         <div class="flex-center position-ref full-height">
                             <table id="customers">
                                 <tr>
@@ -54,12 +53,12 @@
                                         <td>{{$todo->name}}</td>
                                         <td>{{$todo->created_at}}</td>
                                         <td>
-                                            <a href="todo_delete/{{$todo->id}}">Delete</a>
-                                            <a href="todo_edit/{{$todo->id}}">Edit</a>
+                                            <a href="todo_delete/{{$todo->id}}">Delete | </a>
+                                            <a href="todo_edit/{{$todo->id}}">Edit | </a>
+                                            <a href="todo_create">Add</a>
                                         </td>
                                     </tr>
-                                    @endforeach
-                                    </tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>
