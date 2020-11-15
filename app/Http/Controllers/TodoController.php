@@ -52,7 +52,7 @@ class TodoController extends Controller
         $res->name=$request->input('name');
         $res->save();
         
-        $request->session()->flash('msg','Data submitted');
+        $request->session()->flash('msg','Data submitted from store');
         return redirect('todo_show');
     }
 
@@ -87,6 +87,7 @@ class TodoController extends Controller
      */
     public function update(Request $request, Todo $todo)
     {
+//        print_r($request->input());
         $res=Todo::find($request->id);
         $res->name=$request->input('name');
         $res->save();
