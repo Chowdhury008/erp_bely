@@ -36,7 +36,6 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <a href="todo_show"><h2>Back</h2></a>
                         <div class="flex-center position-ref full-height">
                             <form method="post" action="todo_submit">
                                 @csrf
@@ -46,7 +45,7 @@
                                         <td><input type="textname" name="name" required/></td>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><a href="todo_show"><h3>Back</h3></a></td>
                                         <td><input type="submit" name="submit"/></td>
                                     </tr>
                                 </table>
